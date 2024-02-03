@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <header style = "color: white; font-size: larger;"> The header does not have any specific positioning other than 25px margin on all sides, otherwise static in default position. </header>
+
+    <nav> The navigation menu has a fixed position displaced 170 px from the top and 35 px from the left of the page, remaining in this exact position at all times. </nav>
+
+    <div>
+        <div class="articles">
+            <article> The first article has a relative position to the item that proceeds it (nav menu) displaced 15 px from the top. It will appear directly below the nav menu, although the relative position will allow it to scroll past the nav menu that is fixed. </article>
+            <article> The second article has a relative position to the item that proceeds it (first article) displaced 15 px from the top. It will always appear directly below article one. </article>
+        </div>
+        <aside> The aside has an absolute position relative to it's container (the div container) that is displaced 50% from the left, 10% from the right, and 235 px from the top. It will remain/move in this position relative to it's parent conatiner. </aside>
+    </div>
+
+    <footer style = "color: white; font-size: large;"> The footer has a fixed position at the bottom of the screen displaced by 0 px from the bottom. It will remain fixed in this exact position at all times.  </footer>
+
+    <style>
+        header {
+            width: 90%;
+            height: 100px;
+            background-color: #0A13E0;
+            border: 3px solid #848385;
+            padding: 10px;
+            margin: 25px;
+        }
+
+        nav {
+            position: fixed;
+            width: 90%;
+            height: 50px;
+            background-color: #B8B8B8;
+            position: fixed;
+            top: 170px;
+            left: 35px;
+        }
+
+        article {
+            width: 65%;
+            height: 200px;
+            background-color: #2070E0;
+            border: 5px solid grey;
+            position: relative;
+            top: 15px;
+        }
+
+        aside {
+            width: 40%;
+            height: 420px;
+            background-color: #D6D6D6;
+            position: absolute;
+            left: 50%;
+            right: 10%;
+            top: 235px;
+        }
+
+        footer {
+            width: 100%;
+            height: 50px;
+            background-color: #0A13E0;
+            position: fixed;
+            bottom: 0px;
+        }
+
+        .articles {
+            position: relative;
+            left: 30px;
+            top: 45px;
+            width: 65%;
+            height: 70%;
+        }
+    </style>
+
+</body>
+
+</html>
